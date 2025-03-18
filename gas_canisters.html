@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Canisters - Manaloto's Household Supplies Trading</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleReservation(event) {
+            event.preventDefault();
+            const quantity = document.getElementById('quantity').value;
+            const totalPrice = quantity * 150;
+            const pickupDate = document.getElementById('pickupDate').value;
+            const name = document.getElementById('name').value;
+            const contactNumber = document.getElementById('contactNumber').value;
+            const email = document.getElementById('email').value;
+
+            // Validate quantity
+            if (quantity < 0) {
+                alert("Please enter a valid quantity (0 or greater).");
+                return;
+            }
+
+            // Validate contact number (required)
+            if (!contactNumber) {
+                alert("Please enter your contact number.");
+                return;
+            }
+
+            // Prepare the confirmation message
+            let confirmationMessage = `Thank you, ${name}! You have reserved ${quantity} gas canisters. Total price: ₱${totalPrice}. Pickup date: ${pickupDate}.`;
+
+            // Add email to the message if provided
+            if (email) {
+                confirmationMessage += ` We will contact you at ${email}.`;
+            }
+
+            alert(confirmationMessage);
+            document.getElementById('reservationForm').reset();
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container d-flex align-items-center">
+            <img src="logo_no_bg.png" alt="Manaloto's Household Supplies Trading Logo" height="70" class="me-3">
+            <a class="navbar-brand company-name" href="index.html">Manaloto's Household Supplies Trading</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Content -->
+    <main class="container my-5">
+        <h1>Refillable Gas Canisters</h1>
+        <form id="reservationForm" onsubmit="handleReservation(event)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactNumber" class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" id="contactNumber" placeholder="Your Contact Number" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email (Optional)</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity - 150 PHP per Container</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Number of Canisters" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="pickupDate" class="form-label">Pickup Date</label>
+                <input type="date" class="form-control" id="pickupDate" required>
+            </div>
+            <button type="submit" class="btn btn-success">Reserve</button>
+        </form>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <p>&copy; 2025 Manaloto's Household Supplies Trading. All rights reserved.</p>
+            <p>28Y Commercial Bldg, Teresa Homes, Tarlac City, Tarlac | Phone: 123-456-7890 | Email: info@manalotosupplies.com</p>
+        </div>
+    </footer>
+</body>
+</html>
