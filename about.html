@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Manaloto's Household Supplies Trading</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        .about-section h2 {
+            color: #28a745;
+        }
+        .logo-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .logo-section img {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px; /* Adjust the size as needed */
+        }
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px; /* Adjust the height as needed */
+            margin: 0 auto; /* Center the images */
+            display: block;
+        }
+        .carousel {
+            background-color: #f8f9fa; /* Light background for the carousel */
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Updated Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container d-flex align-items-center">
+            <img src="logo_no_bg.png" alt="Manaloto's Household Supplies Trading Logo" height="70" class="me-3">
+            <a class="navbar-brand company-name" href="Manaloto_Store_Index.html">Manaloto's Household Supplies Trading</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Manaloto_Store_Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Manaloto's Household Supplies Trading is a family-owned and managed business that focuses on bringing household products at an affordable price to brighten every home. Established in the late 90s, our small business has turned into a local shop for all sorts of wares and tools that are sure to be of service to you. From spoons and forks to kitchen cabinets, we are your trusted source for household essentials. Quality products at affordable prices.</p>
+        </div>
+    </section>
+
+    <!-- Large Logo Section -->
+    <div class="logo-section">
+        <img src="logo_no_bg.png" alt="Manaloto's Household Supplies Trading Logo">
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div id="storeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Make "shot_of_store.jpg" the first active image -->
+                <div class="carousel-item active">
+                    <img src="shot_of_store.jpg" class="d-block" alt="Store Interior">
+                </div>
+                <div class="carousel-item">
+                    <img src="glassware.jpg" class="d-block" alt="Glassware">
+                </div>
+                <div class="carousel-item">
+                    <img src="linoleum.jpg" class="d-block" alt="Linoleum Table Covers">
+                </div>
+                <div class="carousel-item">
+                    <img src="tubs.jpg" class="d-block" alt="Plastic Tubs">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#storeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#storeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <p>&copy; 2025 Manaloto's Household Supplies Trading. All rights reserved.</p>
+            <p>28Y Commercial Bldg, Teresa Homes, Tarlac City, Tarlac | Phone: 123-456-7890 | Email: info@manalotosupplies.com</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
